@@ -22,5 +22,5 @@ func New(bs *bootstrap.Bootstrap) *Handler {
 
 // APIHealthCheck : Health check handler for api endpoint.
 func (h Handler) APIHealthCheck(c echo.Context) error {
-	return c.Render(http.StatusOK, "info", "API IS FINE")
+	return c.JSON(http.StatusOK, "API IS FINE")
 }

@@ -14,7 +14,7 @@ func Start(port string) {
 	e.Validator = bs.Validator
 
 	e.GET("/", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "info", "API WORKING FINE.")
+		return c.JSON(http.StatusOK, "API WORKING FINE.")
 	})
 
 	router.V1(e, bs)
